@@ -11,7 +11,7 @@
       "name": "Gauge Psicosocial",
       "description": "Velocímetro con aguja.",
       "resource": {
-        "js": "index.js",
+        "js": "viz-codelab.js",
         "config": "index.json"
       }
     }
