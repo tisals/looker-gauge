@@ -2,17 +2,17 @@
   "data": [
     {
       "id": "concepts",
-      "label": "Datos del Gauge",
+      "label": "Configuración de Datos",
       "elements": [
         {
           "id": "dimension",
-          "label": "Descripción",
+          "label": "Categoría (ej. Vicepresidencia)",
           "type": "dimension",
           "options": { "min": 1, "max": 1 }
         },
         {
           "id": "metric",
-          "label": "Puntaje (Métrica)",
+          "label": "Puntaje",
           "type": "metric",
           "options": { "min": 1, "max": 1 }
         }
@@ -21,15 +21,48 @@
   ],
   "style": [
     {
-      "id": "colorRange",
-      "label": "Configuración Visual",
+      "id": "levels",
+      "label": "Niveles de Riesgo (hasta 6)",
       "elements": [
-        {
-          "id": "gaugeColor",
-          "label": "Color de la Aguja",
-          "type": "fontColor",
-          "defaultValue": "#2d3748"
-        }
+        { "id": "level1", "label": "Nivel 1 - valor máximo", "type": "number", "defaultValue": 7.8 },
+        { "id": "level2", "label": "Nivel 2 - valor máximo", "type": "number", "defaultValue": 12.7 },
+        { "id": "level3", "label": "Nivel 3 - valor máximo", "type": "number", "defaultValue": 17.8 },
+        { "id": "level4", "label": "Nivel 4 - valor máximo", "type": "number", "defaultValue": 25.1 },
+        { "id": "level5", "label": "Nivel 5 - valor máximo", "type": "number", "defaultValue": null },
+        { "id": "level6", "label": "Nivel 6 - valor máximo", "type": "number", "defaultValue": null },
+        { "id": "maxValue", "label": "Valor máximo de escala", "type": "number", "defaultValue": 100 }
+      ]
+    },
+    {
+      "id": "labels",
+      "label": "Etiquetas por nivel",
+      "elements": [
+        { "id": "label1", "label": "Etiqueta Nivel 1", "type": "text", "defaultValue": "Sin riesgo" },
+        { "id": "label2", "label": "Etiqueta Nivel 2", "type": "text", "defaultValue": "Bajo" },
+        { "id": "label3", "label": "Etiqueta Nivel 3", "type": "text", "defaultValue": "Medio" },
+        { "id": "label4", "label": "Etiqueta Nivel 4", "type": "text", "defaultValue": "Alto" },
+        { "id": "label5", "label": "Etiqueta Nivel 5", "type": "text", "defaultValue": "Muy alto" },
+        { "id": "label6", "label": "Etiqueta Nivel 6", "type": "text", "defaultValue": "" }
+      ]
+    },
+    {
+      "id": "colors",
+      "label": "Colores por nivel",
+      "elements": [
+        { "id": "color1", "label": "Color Nivel 1", "type": "color", "defaultValue": "#2ecc71" },
+        { "id": "color2", "label": "Color Nivel 2", "type": "color", "defaultValue": "#a3e635" },
+        { "id": "color3", "label": "Color Nivel 3", "type": "color", "defaultValue": "#f1c40f" },
+        { "id": "color4", "label": "Color Nivel 4", "type": "color", "defaultValue": "#e67e22" },
+        { "id": "color5", "label": "Color Nivel 5", "type": "color", "defaultValue": "#e74c3c" },
+        { "id": "color6", "label": "Color Nivel 6", "type": "color", "defaultValue": "#c0392b" }
+      ]
+    },
+    {
+      "id": "appearance",
+      "label": "Apariencia",
+      "elements": [
+        { "id": "needleColor", "label": "Color de la aguja", "type": "color", "defaultValue": "#2d3748" },
+        { "id": "showLabels", "label": "Mostrar etiquetas", "type": "checkbox", "defaultValue": true }
       ]
     }
   ]

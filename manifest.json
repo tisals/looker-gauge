@@ -1,16 +1,20 @@
 {
-  "name": "Velocímetros Psicosociales D3",
+  "name": "Velocímetro de Riesgo Psicosocial TIS",
   "organization": "Tecnoinnsoft SAS BIC",
-  "description": "Gauges tipo semáforo para riesgo psicosocial.",
+  "organizationUrl": "https://deseguridad.net",
+  "description": "Visualización avanzada tipo gauge con semáforo (verde a rojo) para la medición de factores de riesgo psicosocial, estrés y burnout.",
   "logoUrl": "https://deseguridad.net/favicon.ico",
-  "packageUrl": "https://deseguridad.net",
-  "supportUrl": "https://deseguridad.net",
+  "supportUrl": "https://deseguridad.net/contacto",
+  "privacyPolicyUrl": "https://deseguridad.net/privacidad",
+  "termsOfServiceUrl": "https://deseguridad.net/terminos",
+  "packageUrl": "https://github.com/tisals/looker-gauge",
+  "demoReportUrl": "https://lookerstudio.google.com/s/gz8nCJCnqOc",
   "devMode": true,
   "components": [
     {
       "id": "psicosocialGauge",
-      "name": "Gauge Psicosocial",
-      "description": "Velocímetro con aguja y semáforo.",
+      "name": "Gauge Psicosocial TIS",
+      "description": "Velocímetro con aguja animada y 5 niveles de riesgo.",
       "iconUrl": "https://raw.githubusercontent.com/google/datastudio-community-visualizations/master/docs/images/gauge-icon.png",
       "resource": {
         "js": "index.js",
