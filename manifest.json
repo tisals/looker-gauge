@@ -1,18 +1,24 @@
 {
   "name": "Velocímetro TIS",
-  "organization": "Tecnoinnsoft SAS BIC",
-  "description": "Gauge para riesgo psicosocial.",
   "logoUrl": "https://deseguridad.net/favicon.ico",
+  "organization": "Tecnoinnsoft SAS BIC",
+  "organizationUrl": "https://deseguridad.net",
+  "termsOfServiceUrl": "https://deseguridad.net/terminos",
+  "supportUrl": "https://deseguridad.net/contacto",
   "packageUrl": "https://github.com/tisals/looker-gauge",
+  "privacyPolicyUrl": "https://deseguridad.net/privacidad",
+  "description": "Gauge para riesgo psicosocial.",
   "devMode": true,
   "components": [
     {
       "id": "psicosocialGauge",
       "name": "Gauge Psicosocial",
+      "iconUrl": "https://raw.githubusercontent.com/google/datastudio-community-visualizations/master/docs/images/gauge-icon.png",
       "description": "Velocímetro con aguja.",
       "resource": {
-        "js": "viz-codelab.js",
-        "config": "index.json"
+        "js": "https://tu-usuario.github.io/looker-gauge/viz-codelab.js",
+        "config": "https://tu-usuario.github.io/looker-gauge/index.json",
+        "css": "https://tu-usuario.github.io/looker-gauge/viz-codelab.css"
       }
     }
   ]
