@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "id": "concepts",
+      "label": "Datos del Gauge",
+      "elements": [
+        {
+          "id": "dimension",
+          "label": "Descripción",
+          "type": "dimension",
+          "options": { "min": 1, "max": 1 }
+        },
+        {
+          "id": "metric",
+          "label": "Puntaje (Métrica)",
+          "type": "metric",
+          "options": { "min": 1, "max": 1 }
+        }
+      ]
+    }
+  ],
+  "style": [
+    {
+      "id": "colorRange",
+      "label": "Configuración Visual",
+      "elements": [
+        {
+          "id": "gaugeColor",
+          "label": "Color de la Aguja",
+          "type": "fontColor",
+          "defaultValue": "#2d3748"
+        }
+      ]
+    }
+  ]
+}

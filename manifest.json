@@ -1,0 +1,21 @@
+{
+  "name": "Velocímetros Psicosociales D3",
+  "organization": "Tecnoinnsoft SAS BIC",
+  "description": "Gauges tipo semáforo para riesgo psicosocial.",
+  "logoUrl": "https://deseguridad.net/favicon.ico",
+  "packageUrl": "https://deseguridad.net",
+  "supportUrl": "https://deseguridad.net",
+  "devMode": true,
+  "components": [
+    {
+      "id": "psicosocialGauge",
+      "name": "Gauge Psicosocial",
+      "description": "Velocímetro con aguja y semáforo.",
+      "iconUrl": "https://raw.githubusercontent.com/google/datastudio-community-visualizations/master/docs/images/gauge-icon.png",
+      "resource": {
+        "js": "index.js",
+        "config": "index.json"
+      }
+    }
+  ]
+}
