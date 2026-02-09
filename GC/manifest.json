@@ -13,13 +13,12 @@
     {
       "id": "psicosocialGauge",
       "name": "Gauge Psicosocial",
-      "iconUrl": "https://raw.githubusercontent.com/google/datastudio-community-visualizations/master/docs/images/gauge-icon.png",
+      "iconUrl": "http://deseguridad.net/wp-content/uploads/2021/04/cropped-favicon-deseguridad.png",
       "description": "Velocímetro con aguja.",
       "resource": {
-        "js": "https://tu-usuario.github.io/looker-gauge/viz-codelab.js",
-        "config": "https://tu-usuario.github.io/looker-gauge/index.json",
-        "css": "https://tu-usuario.github.io/looker-gauge/viz-codelab.css"
-      }
+        "js": "gs://looker-gauge-tis/brp-gauge.js",
+        "config": "gs://looker-gauge-tis/index.json"
+        }
     }
   ]
 }

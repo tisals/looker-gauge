@@ -1,0 +1,171 @@
+{
+  "data": [
+    {
+      "id": "concepts",
+      "label": "Configuración de Datos",
+      "elements": [
+        {
+          "id": "dimension",
+          "label": "Categoría (ej. Vicepresidencia)",
+          "type": "DIMENSION",
+          "options": { "min": 1, "max": 1 }
+        },
+        {
+          "id": "metric",
+          "label": "Puntaje",
+          "type": "METRIC",
+          "options": { "min": 1, "max": 1 }
+        }
+      ]
+    }
+  ],
+  "style": [
+    {
+      "id": "Nv1",
+      "label": "Nivel 1",
+      "elements": [
+        {
+          "id": "Nv1Color",
+          "label": "Color",
+          "defaultValue": {"color": "#09812e"},
+          "type": "FILL_COLOR"
+        },
+        {
+          "id": "Nv1Limite",
+          "label": "Límite superior",
+          "defaultValue": "7.8",
+          "type": "TEXTINPUT"
+        },
+      { 
+          "id": "Nv1Riesgo",
+          "label": "Riesgo",
+          "defaultValue": "Muy Bajo",
+          "type": "TEXTINPUT"
+        }
+      ]
+    },
+    {
+      "id": "Nv2",
+      "label": "Nivel 2",
+      "elements": [
+        {
+          "id": "Nv2Color",
+          "label": "Color",
+          "defaultValue": {"color": "#8ccf63"},
+          "type": "FILL_COLOR"
+        },
+        {
+          "id": "Nv2Limite",
+          "label": "Límite superior",
+          "defaultValue": "12.7",
+          "type": "TEXTINPUT"
+        },
+      { 
+          "id": "Nv2Riesgo",
+          "label": "Riesgo",
+          "defaultValue": "Bajo",
+          "type": "TEXTINPUT"
+        }
+      ]
+    },
+    {
+      "id": "NV3",
+      "label": "Nivel 3",
+      "elements": [
+        {
+          "id": "Nv3Color",
+          "label": "Color",
+          "defaultValue": {"color": "#d6da0e"},
+          "type": "FILL_COLOR"
+        },
+        {
+          "id": "Nv3Limite",
+          "label": "Límite superior",
+          "defaultValue": "17.8",
+          "type": "TEXTINPUT"
+        },
+      { 
+          "id": "Nv3Riesgo",
+          "label": "Riesgo",
+          "defaultValue": "Medio",
+          "type": "TEXTINPUT"
+        }
+      ]
+    },
+    {
+      "id": "NV4",
+      "label": "Nivel 4",
+      "elements": [
+        {
+          "id": "Nv4Color",
+          "label": "Color",
+          "defaultValue": {"color": "#f0a200"},
+          "type": "FILL_COLOR"
+        },
+        {
+          "id": "Nv4Limite",
+          "label": "Límite superior",
+          "defaultValue": "25.1",
+          "type": "TEXTINPUT"
+        },
+      { 
+          "id": "Nv4Riesgo",
+          "label": "Riesgo",
+          "defaultValue": "Alto",
+          "type": "TEXTINPUT"
+        }
+      ]
+    },
+    {
+      "id": "Nv5",
+      "label": "Nivel 5",
+      "elements": [
+        {
+          "id": "Nv5Color",
+          "label": "Color",
+          "defaultValue": {"color": "#d71919"},
+          "type": "FILL_COLOR"
+        },
+        {
+          "id": "Nv5Limite",
+          "label": "Límite superior",
+          "defaultValue": "100",
+          "type": "TEXTINPUT"
+        },
+      { 
+          "id": "Nv5Riesgo",
+          "label": "Riesgo",
+          "defaultValue": "Muy Alto",
+          "type": "TEXTINPUT"
+        }
+      ]
+    },
+    {
+      "id": "NV6",
+      "label": "Nivel 6",
+      "elements": [
+        {
+          "id": "Nv6Color",
+          "label": "Color",
+          "defaultValue": {"color": "#690303"},
+          "type": "FILL_COLOR"
+        },
+        {
+          "id": "Nv6Limite",
+          "label": "Límite superior",
+          "defaultValue": "100",
+          "type": "TEXTINPUT"
+        },
+      { 
+          "id": "Nv6Riesgo",
+          "label": "Riesgo",
+          "defaultValue": "Critico",
+          "type": "TEXTINPUT"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "enableComparisonDateRange": false
+  }
+}

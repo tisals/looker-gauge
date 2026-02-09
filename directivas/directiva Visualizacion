@@ -1,0 +1,73 @@
+# DIRECTIVA: GAUGE_RISK_VISUALIZATION
+> **Responsable:** Alejandro Leguízamo  
+> **Archivo Asociado:** `brp-gauge.js`  
+> **Estado:** Activo  
+> **Última Mejora:** 2026-02-09  
+> **Versión:** 1.1.0
+
+---
+
+## 1. Propósito
+
+Visualización tipo *Gauge* para Looker Studio que muestra una métrica numérica con aguja y hasta 6 niveles de riesgo configurables (color, límite, etiqueta). Permite interpretación visual rápida y parametrización desde el panel de estilos.
+
+---
+
+## 2. Responsabilidad
+
+Solo renderizar el gauge en SVG/D3.js a partir de datos y estilos recibidos. No gestionar datos ni lógica de negocio.
+
+---
+
+## 3. Entradas y Salidas
+
+- **Entrada:**  
+  - `data.tables.DEFAULT.rows`: métrica numérica para aguja.  
+  - `data.style`: configuración dinámica de límites, colores, etiquetas, tamaño texto.  
+  - `index.json`: define controles de datos y estilos.
+
+- **Salida:**  
+  - DOM/SVG con gauge renderizado y leyenda de niveles.
+
+---
+
+## 4. Flujo de Renderizado
+
+1. Validar y transformar datos (filas array a objeto).  
+2. Leer y validar estilos con función `safeStyle`.  
+3. Normalizar y ordenar niveles de riesgo.  
+4. Calcular escala angular y radio según tamaño contenedor.  
+5. Renderizar arco base y segmentos con D3.js.  
+6. Dibujar aguja con trigonometría coherente.  
+7. Renderizar valor numérico y etiqueta activa.  
+8. Generar leyenda compacta con bloques de color y texto con contraste automático.  
+9. Adaptar tamaño y posición para responsividad total.
+
+---
+
+## 5. Ajustes Técnicos y Lecciones
+
+- **Datos:** filas llegan como arrays, se convierten a objetos para acceso por nombre.  
+- **Estilos:** lectura robusta con `safeStyle` para múltiples rutas.  
+- **Responsividad:** SVG con `viewBox` dinámico, flexbox para layout, radio y centro calculados según tamaño real.  
+- **Leyenda:** bloques sin espacios, texto blanco o negro según luminancia, tamaño configurable desde estilos.  
+- **Aguja:** cálculo trigonométrico correcto, longitud proporcional al radio.  
+- **Validaciones:** filtros para límites válidos, fallback para valores y colores.  
+- **Errores:** manejo para evitar caídas por datos o estilos inválidos.
+
+---
+
+## 6. Configuración en `index.json`
+
+Ejemplo para estilos:
+
+```json
+{
+  "style": [
+    { "id": "Nv1Limite", "label": "Límite Nivel 1", "type": "NUMBER", "defaultValue": 7.8 },
+    { "id": "Nv1Color", "label": "Color Nivel 1", "type": "FILL_COLOR", "defaultValue": { "color": "#2e7d32" } },
+    { "id": "Nv1Riesgo", "label": "Etiqueta Nivel 1", "type": "TEXTINPUT", "defaultValue": "Muy Bajo" },
+    // ... niveles 2 a 6 ...
+    { "id": "legendTextSize", "label": "Tamaño texto leyenda", "type": "NUMBER", "defaultValue": 11, "minValue": 8, "maxValue": 20, "step": 1 }
+  ]
+}
